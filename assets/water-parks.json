@@ -1,0 +1,109 @@
+[
+  {
+    "id": 0,
+    "name": "Água Show Park",
+    "address": {
+      "state_acro": "SC",
+      "city": "Florianópolis",
+      "street": "Rodovia Armando Calil Bullos, SC-403, 3868 - Ingleses Norte",
+      "geo": {
+        "lat": "-27.437910",
+        "lon": "-48.408310"
+      }
+    },
+    "opening_hours": "08:00 - 17:00",
+    "images": [
+      "https://i0.wp.com/viajandoem321.com/wp-content/uploads/2016/01/9-blog-viajando-em-3-2-1-agua-show-park-florian%C3%B3polis-ingleses-santa-catarina-melhor-parque-aqu%C3%A1tico.jpg", "https://picsum.photos/id/22/4434/3729", "https://fastly.picsum.photos/id/24/4855/1803.jpg?hmac=ICVhP1pUXDLXaTkgwDJinSUS59UWalMxf4SOIWb9Ui4"
+    ],
+    "web_link": "www.aguashowpark.com.br/",
+    "entrance_fee": "R$ 70,00",
+    "entrance_fee_link": "www.aguashowpark.com.br/loja/",
+    "email": "contato@aguashowpark.com.br",
+    "phone_number": "(+55) 48 3369-2132",
+    "fav": false
+  },
+  {
+    "id": 1,
+    "name": "Caverá Country Park",
+    "address": {
+      "state_acro": "SC",
+      "city": "Araranguá",
+      "street": "Rod. Valmiro Manoel Gonçalves, s/n - Morro dos Conventos",
+      "geo": {
+        "lat": "-28.936501",
+        "lon": "-49.393954"
+      }
+    },
+    "opening_hours": "08:00 - 16:00",
+    "images": ["https://www.caveracountry.com.br/images//dji-0134-3805597079-2841455102.jpg"],
+    "web_link": "www.caverapark.com.br/",
+    "entrance_fee": "R$ 75,00",
+    "entrance_fee_link": "nucleodeturismo.com.br/ticket/index.php?ticket_id=1c383cd30b7c298ab50293adfecb7b18",
+    "email": "contato@lojacaverapark.com.br",
+    "phone_number": "(+55) 48 3524-6999",
+    "fav": false
+  },
+  {
+    "id": 2,
+    "name": "Parque Aquático Zacarias",
+    "address": {
+      "state_acro": "SC",
+      "city": "Itajaí",
+      "street": "Rua Benjamin Dagnoni, Travessa Zacarias Bernardes, 350",
+      "geo": {
+        "lat": "-26.945840",
+        "lon": "-48.711690"
+      }
+    },
+    "opening_hours": "09:00 - 17:00",
+    "images": ["https://picsum.photos/id/22/4434/3729"],
+    "web_link": "loja.parqueaquaticozacarias.com.br/",
+    "entrance_fee": "R$ 80,00",
+    "entrance_fee_link": "parqueaquaticozacarias.com.br/#rate",
+    "email": "contato@lojacaverapark.com.br",
+    "phone_number": "(+55) 49 3346 5034",
+    "fav": false
+  },
+  {
+    "id": 3,
+    "name": "Beach Park",
+    "address": {
+      "state_acro": "CE",
+      "city": "Aquiraz",
+      "street": "Rua Porto das Dunas, 2734 - Porto das Dunas",
+      "geo": {
+        "lat": "-3.846060",
+        "lon": "-38.397060"
+      }
+    },
+    "opening_hours": "11:00 - 17:00",
+    "images": ["https://conteudo.imguol.com.br/c/entretenimento/11/2022/01/12/vista-geral-do-acqua-park-parque-aquatico-do-beach-park-1642005829685_v2_1x1.jpg"],
+    "web_link": "www.beachpark.com.br/",
+    "entrance_fee": "R$ 270,00",
+    "entrance_fee_link": "ingresso.beachpark.com.br/",
+    "email": "contato@beachpark.com.br",
+    "phone_number": "(+55) 85 4012 3000",
+    "fav": false
+  },
+  {
+    "id": 4,
+    "name": "Parque Aquático Olímpia",
+    "address": {
+      "state_acro": "SP",
+      "city": "Olímpia",
+      "street": "Av. Dep. Waldemar Lopes Ferraz, 571 - Centro",
+      "geo": {
+        "lat": "-20.740490",
+        "lon": "-48.908930"
+      }
+    },
+    "opening_hours": "08:00 - 18:00",
+    "images": ["https://ogimg.infoglobo.com.br/in/25302236-f3b-15e/FT1500A/690/olimpia_sp-17.jpg"],
+    "web_link": "www.parqueaquaticoolimpia.com.br/",
+    "entrance_fee": "R$ 150,00",
+    "entrance_fee_link": "ingressos.parqueaquaticoolimpia.com.br/",
+    "email": "contato@parqueaquaticoolimpia.com.br",
+    "phone_number": "(+55) 17 3500-0657",
+    "fav": false
+  }
+]
