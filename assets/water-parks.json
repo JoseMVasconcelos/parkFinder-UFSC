@@ -13,8 +13,9 @@
     },
     "opening_hours": "08:00 - 17:00",
     "images": [
-      "https://i0.wp.com/viajandoem321.com/wp-content/uploads/2016/01/9-blog-viajando-em-3-2-1-agua-show-park-florian%C3%B3polis-ingleses-santa-catarina-melhor-parque-aqu%C3%A1tico.jpg", "https://picsum.photos/id/22/4434/3729", "https://fastly.picsum.photos/id/24/4855/1803.jpg?hmac=ICVhP1pUXDLXaTkgwDJinSUS59UWalMxf4SOIWb9Ui4"
+      "https://i0.wp.com/viajandoem321.com/wp-content/uploads/2016/01/9-blog-viajando-em-3-2-1-agua-show-park-florian%C3%B3polis-ingleses-santa-catarina-melhor-parque-aqu%C3%A1tico.jpg", "https://www.aguashowpark.com.br/wp-content/uploads/IMG_5615-e1511520933673.jpg", "https://www.aguashowpark.com.br/wp-content/uploads/IMG_5891.jpg", "https://www.aguashowpark.com.br/wp-content/uploads/IMG_5766-1-e1511524319299.jpg", "https://www.aguashowpark.com.br/wp-content/uploads/IMG_5574-e1511523014452.jpg"
     ],
+    "video_gallery_link": "www.aguashowpark.com.br/videos/",
     "web_link": "www.aguashowpark.com.br/",
     "entrance_fee": "R$ 70,00",
     "entrance_fee_link": "www.aguashowpark.com.br/loja/",
@@ -35,7 +36,8 @@
       }
     },
     "opening_hours": "08:00 - 16:00",
-    "images": ["https://www.caveracountry.com.br/images//dji-0134-3805597079-2841455102.jpg"],
+    "images": ["https://www.caveracountry.com.br/images//dji-0134-3805597079-2841455102.jpg", "https://www.caveracountry.com.br/images//atracoes-banner-3-1874469574-9706679168.jpg", "https://www.caveracountry.com.br/images//piscina-termica-hotel-3774302550.jpg", "https://www.caveracountry.com.br/images//3-6351044955-5137829640.jpg", "https://www.caveracountry.com.br/images//4-2--5331687466-8075410402.jpg"],
+    "video_gallery_link": "www.youtube.com/watch?v=c2s-pb3yb0U",
     "web_link": "www.caverapark.com.br/",
     "entrance_fee": "R$ 75,00",
     "entrance_fee_link": "nucleodeturismo.com.br/ticket/index.php?ticket_id=1c383cd30b7c298ab50293adfecb7b18",
@@ -56,11 +58,12 @@
       }
     },
     "opening_hours": "09:00 - 17:00",
-    "images": ["https://picsum.photos/id/22/4434/3729"],
+    "images": ["https://parqueaquaticozacarias.com.br/images/galeria/galeria-1.jpg", "https://parqueaquaticozacarias.com.br/images/galeria/galeria-31.jpg", "https://parqueaquaticozacarias.com.br/images/galeria/galeria-33.jpg", "https://parqueaquaticozacarias.com.br/images/galeria/galeria-24.jpg", "https://parqueaquaticozacarias.com.br/images/galeria/galeria-12.jpg"],
+    "video_gallery_link": "www.youtube.com/watch?v=LltpYPHz6Hg",
     "web_link": "loja.parqueaquaticozacarias.com.br/",
     "entrance_fee": "R$ 80,00",
     "entrance_fee_link": "parqueaquaticozacarias.com.br/#rate",
-    "email": "contato@lojacaverapark.com.br",
+    "email": "contato@parqueaquaticozacarias.com.br",
     "phone_number": "(+55) 49 3346 5034",
     "fav": false
   },
@@ -77,7 +80,8 @@
       }
     },
     "opening_hours": "11:00 - 17:00",
-    "images": ["https://conteudo.imguol.com.br/c/entretenimento/11/2022/01/12/vista-geral-do-acqua-park-parque-aquatico-do-beach-park-1642005829685_v2_1x1.jpg"],
+    "images": ["https://conteudo.imguol.com.br/c/entretenimento/11/2022/01/12/vista-geral-do-acqua-park-parque-aquatico-do-beach-park-1642005829685_v2_1x1.jpg", "https://braziljournal.com/wp-content/uploads/2022/06/4ed16995-2125-6ae4-a3f7-b6e6608a48d3.jpg", "https://guiacumbuco.com.br/wp-content/uploads/2023/02/Beach-Park-Ilha-do-Tesouro-GuiaCumbuco.jpg", "https://i0.wp.com/www.destinosimperdiveis.com.br/wp-content/uploads/2019/07/di_beachpark01.jpg?fit=2000%2C1498&ssl=1"],
+    "video_gallery_link": "www.youtube.com/channel/UCSqPlEIkHZDhBuV9eSVi17w", 
     "web_link": "www.beachpark.com.br/",
     "entrance_fee": "R$ 270,00",
     "entrance_fee_link": "ingresso.beachpark.com.br/",
@@ -98,7 +102,8 @@
       }
     },
     "opening_hours": "08:00 - 18:00",
-    "images": ["https://ogimg.infoglobo.com.br/in/25302236-f3b-15e/FT1500A/690/olimpia_sp-17.jpg"],
+    "images": ["https://ogimg.infoglobo.com.br/in/25302236-f3b-15e/FT1500A/690/olimpia_sp-17.jpg", "https://www.parqueaquaticoolimpia.com.br/thumb_galeria.php?img=fotos/15687299385d80eb527ffa7313335506.jpg", "https://www.parqueaquaticoolimpia.com.br/thumb_galeria.php?img=fotos/15687299385d80eb5291b63478198642.jpg"],
+    "video_gallery_link": "www.youtube.com/channel/UCSqPlEIkHZDhBuV9eSVi17w", 
     "web_link": "www.parqueaquaticoolimpia.com.br/",
     "entrance_fee": "R$ 150,00",
     "entrance_fee_link": "ingressos.parqueaquaticoolimpia.com.br/",

@@ -5,7 +5,6 @@ import {
   Image,
   Pressable,
   StyleSheet,
-  Dimensions,
 } from 'react-native';
 
 

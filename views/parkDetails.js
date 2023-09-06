@@ -10,10 +10,8 @@ import {
   Platform,
   Linking,
   Switch,
-  ScrollView
 } from "react-native";
 import AsyncStorage from "@react-native-async-storage/async-storage";
-import { assertStatusValuesInBounds } from "expo-av/build/AV";
 
 export default class ParkDetailsScreen extends React.Component {
   static navigationOptions = {
@@ -29,6 +27,7 @@ export default class ParkDetailsScreen extends React.Component {
       street: park.address.street,
       state_acro: park.address.state_acro,
       images: park.images,
+      video_gallery_link: park.gallery_link,
       email: park.email,
       phone_number: park.phone_number,
       entrance_fee: park.entrance_fee,
@@ -41,18 +40,17 @@ export default class ParkDetailsScreen extends React.Component {
     };
   }
 
-  parkUpdater = async () => {
-    const parks = await AsyncStorage.getItem("parks");
-  }
+  // parkUpdater = async () => {
+  //   const parks = await AsyncStorage.getItem("parks");
+  // }
 
-  componentDidMount() {
-    setTimeout(async() => {
-      await this.parkUpdater();
-    }, 200);
-  }
+  // componentDidMount() {
+  //   setTimeout(async() => {
+  //     await this.parkUpdater();
+  //   }, 200);
+  // }
 
   render() {
-    const { navigate } = this.props.navigation;
     const {
       id,
       name,
@@ -67,6 +65,7 @@ export default class ParkDetailsScreen extends React.Component {
       opening_hours,
       lat,
       lon,
+      video_gallery_link
     } = this.state;
     const mapUrl = Platform.select({
       ios: `maps:0,0?q=${lat},${lon}`,
@@ -74,7 +73,6 @@ export default class ParkDetailsScreen extends React.Component {
     });
 
     return (
-      <ScrollView style={styles.scrollView}>
       <View style={styles.container}>
         <View style={styles.titleContainer}>
           <Text style={styles.title}>{name}</Text>
@@ -100,21 +98,34 @@ export default class ParkDetailsScreen extends React.Component {
 
         <View style={styles.thinLineContainer}>
           <Text style={styles.thinLine}>Custo do ingresso: {entrance_fee}</Text>
-          <Text style={styles.thinLine}>
-            Horário de funcionamento: {opening_hours}
-          </Text>
+          <Text style={styles.thinLine}>Horário de funcionamento: {opening_hours}</Text>
         </View>
 
-        <View style={styles.contactContainer}>
-          <Text style={styles.thinLine}>Entre em contato! </Text>
+        <View>
+          <Text style={styles.thinLine}> Entre em contato! </Text>
           <Pressable onPress={() => Linking.openURL(`mailto:${email}`)}>
-            <Text style={styles.contactText}> - {email}</Text>
+            <Text style={styles.contactText}>  - {email}</Text>
           </Pressable>
           <Pressable onPress={() => Linking.openURL(`tel:${phone_number}`)}>
-            <Text style={styles.contactText}> - {phone_number}</Text>
+            <Text style={styles.contactText}>  - {phone_number}</Text>
           </Pressable>
         </View>
-
+        <View style={styles.rowContainer}>
+          <Text style={styles.thinLine}> Adicionar aos favoritos? </Text>
+          <Switch
+            trackColor={{ false: "#767577", true: "#81b0ff" }}
+            thumbColor={this.state.fav ? "#f5dd4b" : "#f4f3f4"}
+            ios_backgroundColor="#3e3e3e"
+            onValueChange={async (value) => {
+              const parks = JSON.parse(await AsyncStorage.getItem("parks"));
+              parks[id].fav = value;
+              this.state.fav = value;
+              this.setState({ value });
+              await AsyncStorage.setItem("parks", JSON.stringify(parks));
+            }}
+            value={this.state.fav}
+          />
+        </View>
         <View style={styles.pressableContainer}>
           <Pressable
             style={styles.pressable}
@@ -124,27 +135,16 @@ export default class ParkDetailsScreen extends React.Component {
           </Pressable>
           <Pressable
             style={styles.pressable}
-            onPress={() => Linking.openURL(`https:${entrance_fee_link}`)}
-          >
+            onPress={() => Linking.openURL(`https:${entrance_fee_link}`)}>
             <Text style={styles.pressableText}> Compre o ingresso! </Text>
           </Pressable>
+          <Pressable
+            style={styles.pressable}
+            onPress={() => Linking.openURL(`https:${video_gallery_link}`)}>
+            <Text style={styles.pressableText}> Ver videos! </Text>
+          </Pressable>
         </View>
-
-        <Switch
-          trackColor={{ false: "#767577", true: "#81b0ff" }}
-          thumbColor={this.state.fav ? "#f5dd4b" : "#f4f3f4"}
-          ios_backgroundColor="#3e3e3e"
-          onValueChange={async (value) => {
-            const parks = JSON.parse(await AsyncStorage.getItem("parks"));
-            parks[id].fav = value;
-            this.state.fav = value;
-            this.setState({ value });
-            await AsyncStorage.setItem("parks", JSON.stringify(parks));
-          }}
-          value={this.state.fav}
-        />
       </View>
-      </ScrollView>
     );
   }
 }
@@ -166,34 +166,39 @@ const styles = StyleSheet.create({
     padding: 4,
   },
 
-  contactContainer: {},
-
   title: {
     margin: 5,
-    fontSize: 36,
+    fontSize: 34,
     color: "white",
     textAlign: "center",
   },
 
   subTitle: {
-    fontSize: 26,
+    fontSize: 24,
     color: "white",
     textAlign: "center",
   },
 
   thinLine: {
-    fontSize: 20,
+    fontSize: 18,
     color: "white",
+    paddingVertical: 8,
   },
 
   contactText: {
-    fontSize: 20,
+    fontSize: 18,
     color: "white",
-    paddingVertical: 6,
+    paddingVertical: 10,
   },
 
   pressableContainer: {
-    justifyContent: "space-evenly",
+    flexDirection: "row",
+    justifyContent: "space-around"
+  },
+  
+  rowContainer: {
+    flexDirection: "row",
+    justifyContent: "space-between"
   },
 
   pressable: {
@@ -201,7 +206,7 @@ const styles = StyleSheet.create({
     borderWidth: 3,
     borderRadius: 10,
     borderColor: "#black",
-    width: "40%",
+    width: "30%",
     height: 50,
     alignItems: "center",
     justifyContent: "center",

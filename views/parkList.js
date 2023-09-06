@@ -4,14 +4,13 @@ import {
   View,
   StyleSheet,
   Button,
-  Navigate,
-  ScrollView,
   FlatList,
   TouchableOpacity,
   Image,
 } from 'react-native';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import WaterParkList from '../assets/water-parks.json';
+import {NavigationEvents} from 'react-navigation';
 
 export default class ParkListScreen extends React.Component {
   static navigationOptions = {
@@ -20,14 +19,14 @@ export default class ParkListScreen extends React.Component {
 
   constructor(props){
     super(props);
-    console.log("parklist.constructor")
+    // console.log("parklist.constructor")
     this.state ={
       waterParks: []
     };
   }
 
   handleParks = async () => {
-    console.log("parklist.handleParks")
+    // console.log("parklist.handleParks")
     // await AsyncStorage.clear()
     let parks = await AsyncStorage.getItem('parks');
 
@@ -41,17 +40,21 @@ export default class ParkListScreen extends React.Component {
   }
 
   componentDidMount() {
-    console.log("parklist.DidMount")
+    // console.log("parklist.DidMount")
     setTimeout(async() => {
       await this.handleParks();
     }, 200);
   }
 
   render() {
-    const { navigate } = this.props.navigation;
+    const { navigate, goBack } = this.props.navigation;
 
     return (
       <>
+        <NavigationEvents onDidFocus={() => {
+          this.handleParks();
+          console.log('I am triggered')} 
+        }/>
         <FlatList style={styles.flatList}
           data={this.state.waterParks}
           renderItem={({ item }) => (
@@ -65,9 +68,7 @@ export default class ParkListScreen extends React.Component {
             </TouchableOpacity>
           )}
         />
-          <Button title="Voltar" onPress={() => navigate('Splash')} />
-          <Button title="Favorito" onPress={() => navigate('FavouriteList')} />
-          <Button title="Favorito" onPress={() => navigate('Splash')} />
+          <Button title="Favoritos" onPress={() => navigate('FavouriteList')} />
       </>
     );
   }

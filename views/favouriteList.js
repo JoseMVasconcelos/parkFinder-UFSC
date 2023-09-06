@@ -4,13 +4,12 @@ import {
   View,
   StyleSheet,
   Button,
-  ScrollView,
   FlatList,
   TouchableOpacity,
   Image,
-  Pressable
 } from 'react-native';
 import AsyncStorage from '@react-native-async-storage/async-storage';
+import {NavigationEvents} from 'react-navigation';
 
 export default class FavouriteListScreen extends React.Component {
   static navigationOptions = {
@@ -41,9 +40,13 @@ export default class FavouriteListScreen extends React.Component {
   }
   
   render() {
-    const { navigate } = this.props.navigation;
+    const { navigate, goBack } = this.props.navigation;
     return (
       <>
+        <NavigationEvents onDidFocus={() => {
+          this.handleParks();
+          console.log('I am triggered')} 
+        }/>
         <FlatList style={styles.flatList}
           data={this.state.parks}
           renderItem={({ item }) => (
@@ -59,7 +62,7 @@ export default class FavouriteListScreen extends React.Component {
           )}
         />
         <View>
-          <Button style={styles.button} title="Voltar" onPress={() => navigate('ParkList')} />
+          <Button style={styles.button} title="Voltar" onPress={() => goBack()} />
         </View>
       </>
     );
@@ -93,9 +96,4 @@ const styles = StyleSheet.create({
     height: 150,
     width: "90%"
   },
-  button: {
-    color: "black",
-    height: 50,
-    width: 50,
-  }
 });
